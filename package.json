@@ -1,0 +1,29 @@
+{
+  "name": "create-nestjs-hexagonal",
+  "version": "1.0.0",
+  "description": "Scaffold a NestJS project with Hexagonal Architecture, DDD, and CQRS patterns",
+  "bin": {
+    "create-nestjs-hexagonal": "./bin/create-nestjs-hexagonal.js"
+  },
+  "keywords": [
+    "nestjs",
+    "hexagonal-architecture",
+    "ddd",
+    "cqrs",
+    "scaffold",
+    "cli",
+    "create"
+  ],
+  "author": "Softtor",
+  "license": "MIT",
+  "repository": "https://github.com/softtor/create-nestjs-hexagonal",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

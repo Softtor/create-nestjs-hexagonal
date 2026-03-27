@@ -1,0 +1,23 @@
+# Node
+node_modules/
+dist/
+coverage/
+
+# Environment
+.env
+.env.*.local
+
+# NestJS
+.nest/
+
+# Prisma
+prisma/migrations/*.sql
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
