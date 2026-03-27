@@ -72,7 +72,9 @@ npm run start:dev
 Install the companion plugin to get slash commands for generating bounded contexts and use cases:
 
 ```bash
-claude /plugin install github.com/softtor/nestjs-hexagonal
+# In Claude Code:
+/plugin marketplace add softtor/nestjs-hexagonal
+/plugin install nestjs-hexagonal
 ```
 
 Then create your first bounded context:

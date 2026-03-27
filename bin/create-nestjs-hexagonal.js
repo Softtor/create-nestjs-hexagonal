@@ -118,7 +118,8 @@ function createProject(projectName) {
 
   if (!pluginInstalled) {
     console.log('  Install the Claude Code plugin:\n');
-    console.log('    claude /plugin install github.com/softtor/nestjs-hexagonal\n');
+    console.log('    /plugin marketplace add softtor/nestjs-hexagonal');
+    console.log('    /plugin install nestjs-hexagonal\n');
   }
 
   console.log('  Create your first bounded context:\n');
@@ -429,7 +430,14 @@ function installPlugin(projectDir) {
     const claudePath = execFileSync('which', ['claude'], { encoding: 'utf8' }).trim();
     if (claudePath) {
       console.log('  Installing nestjs-hexagonal Claude Code plugin...\n');
-      execFileSync('claude', ['plugin', 'install', 'github.com/softtor/nestjs-hexagonal'], {
+      // Step 1: Add marketplace
+      execFileSync('claude', ['plugin', 'marketplace', 'add', 'softtor/nestjs-hexagonal'], {
+        cwd: projectDir,
+        stdio: 'inherit',
+        timeout: 30000,
+      });
+      // Step 2: Install plugin from marketplace
+      execFileSync('claude', ['plugin', 'install', 'nestjs-hexagonal'], {
         cwd: projectDir,
         stdio: 'inherit',
         timeout: 30000,
